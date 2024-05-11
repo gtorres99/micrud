@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud_App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <main class="container">
+    <section class="crud">
+        <h1 class="crud_title">Control de Ingreso de Usuarios a U.C.I.</h1>
+        <img class="logo" src="images/logo.jpg" alt="">
+        <!-- Creamos un formulario para ingresar datos. Etiquetas con id para modificar en Js y Class en CSS -->
+        <form id="formRegister" class="crud_form">
+            <input type="text" placeholder="Nombre" id="nameinput" class="form_input">
+            <input type="text" pattern= "[0-9]*" placeholder="ID" id="idinput" class="form_input">
+
+        <!-- Este botón tiene una clase general "button" y agregamos modificadores como button--primary -->    
+            <button type="submit" id="submitbutton" class="button button--primary" >Agregar</button>
+            <button type="button" id="acceptbutton" class="button button--primary" style="display:none;">Aceptar</button>
+        </form>
+
+        <!-- Creamos una tabla para que se visualicen los datos -->
+        <table class="crudtable">
+        <thead>
+            <tr>
+                <th class="table_header">Nombre</th>
+                <th class="table_header">ID</th>
+                <th class="table_header">Fecha y Hora</th>
+                <th class="table_header">Acciones</th>
+            </tr>
+        </thead>
+
+        <!-- Creamos el cuerpo de la tabla que se agrega o elimina automaticamente -->
+        <tbody id="tablebody" class="table_body">
+        </tbody>
+        </table>
+    </section>
+   </main>
+    
+    <script src="app.js"></script>    
+</body>
+</html>

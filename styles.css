@@ -1,0 +1,120 @@
+/* fuente importada de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24+Charted&family=Orbitron:wght@400..900&display=swap" rel="stylesheet');
+
+/* Se reinician los espacios que se agregan por defecto, quedan en 0 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 20px;
+    padding: 40px;
+    background-color: darkslateblue;
+    border: 2px solid #070707; /* Ancho del borde y color */
+    border-radius: 10px; /* Curvatura de las esquinas */
+}
+
+/* todo texto tendrá la fuente Montserrat, botones, entradas de texto, body, etc. */
+body, button, input {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* La clase container estará centrada, que es el contenedor "padre" de todo el formulario */
+.container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.crud_title {
+    text-align: center;
+    color: rgb(11, 11, 12);
+    display: inline-block; /* Mostrar el título en línea con el logo */
+    vertical-align: middle; /* Alinear verticalmente el título con el logo */
+    margin-right: 0px;
+    margin-top: -50px;
+}
+
+.logo {
+    float: right;
+    width: 200px; /* Ancho del logo */
+    height: 80px;
+    margin-top: -50px;
+    margin-left: 20px;
+}
+    
+.crud_form {
+    display: flex;
+    margin: 20px 0; /* Aumenta el margen superior e inferior para separar el formulario de los botones */
+    padding: 20px; /* Ajusta el espacio interno del formulario */
+    border: 2px solid #070707; /* Ancho del borde y color */
+    border-radius: 10px; /* Curvatura de las esquinas */
+}
+
+/* Tamaño de fuente de las entradas a 1rem unidad relativa, equivale al tamaño por defecto del navegador, 2rem = 18px * 2  */
+.form_input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* Estilos al botón "padre" o en general  */
+.button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+/* efecto al pasar el mouse sobre el botón, crece 1.2  */
+.button:hover{
+    transform: scale(1.2);
+}
+
+/* Estilos especificos a "botón "primary" pero conserva propiedades del botón general "padre" */
+.button--primary {
+    background-color: aquamarine;
+}
+
+/* Estilos especificos a "botón "secundary" que se crean automaticamente en la celda "acciones"*/
+.button--secundary {
+    background-color: #ffc107;
+}
+
+/* Estilos especificos a "botón "terciary" que se crean automaticamente en la celda "acciones"*/
+.button--terciary {
+    background-color: #dc3545;
+    color: #f0f0f0;
+}
+
+/* Estilos a la tabla del Crud */
+.crudtable {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.table_header, .table_body td {
+    border: 1px solid #cccccc;
+    padding: 5px;
+}
+
+.table_header {
+    background-color: #f50cd6;
+}
+
+/* Estilos para el tercer elemento de la tablebody lo que serán los botones de la celda "acciones" */
+.table_body td:nth-child(3){
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Estilos para los botones de editar y eliminar */
+.action_button {
+    margin: 0 5px; /* Espacio entre los botones */
+    flex: 1; /* Ocupar todo el espacio disponible */
+    text-align: center; /* Centrar el texto */
+}
